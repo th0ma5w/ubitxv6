@@ -1,3 +1,29 @@
+# PlatformIO 
+
+## Check platform.ini for upload port
+
+
+
+## Backup Existing Firmware
+
+    avrdude -p m328p -c arduino -P /dev/ttyUSB0 -b 57600 -U flash:r:flash_backup_file.hex:i
+    avrdude -p m328p -c arduino -P /dev/ttyUSB0 -b 57600 -U flash:r:flash_backup_file.bin:r
+
+## Compile
+
+    pio run
+
+## Flash
+
+    pio erase
+    pio run -t upload
+
+or
+
+    avrdude -p m328p -c arduino -P /dev/ttyUSB0 -b 57600 -U flash:w:firmware.hex:i
+
+
+
 # ubitxv6
 uBitx v6.3.1 Arduino sketch
 IMPORTANT: It will compile only if you place this in the Arduino's own sketch directory! This is because of the restricted places that the Arduino searches for it's include files (the headers).
