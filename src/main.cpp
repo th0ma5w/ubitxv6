@@ -29,6 +29,7 @@
  *  The Wire.h library is used to talk to the Si5351 and we also declare an instance of 
  *  Si5351 object to control the clocks.
  */
+#include <Arduino.h>
 #include <Wire.h>
 #include <EEPROM.h>
 #include "ubitx.h"
